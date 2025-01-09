@@ -31,7 +31,7 @@ const MyWSBMiR = () => {
   axios.defaults.baseURL = 'https://ap-server-8qi1.onrender.com';
 
   useEffect(() => {
-    document.title = 'My wsbmir | wsbmir';
+    document.title = 'My WSBMiR | WSBMiR';
 
     const refreshToken = async () => {
       console.log('token refresher');
