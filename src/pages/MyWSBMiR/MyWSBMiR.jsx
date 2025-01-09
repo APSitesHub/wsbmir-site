@@ -16,10 +16,10 @@ import {
 import { useEffect, useState } from 'react';
 import * as yup from 'yup';
 import { MyPlatform } from './My Platform/MyPlatform';
-import { MyPedagogiumPanel } from './MyPedagogiumPanel/MyPedagogiumPanel';
-import { LoginErrorNote } from './MyPedagogiumPanel/MyPedagogiumPanel.styled';
+import { MyWSBMiRPanel } from './MyWSBMiRPanel/MyWSBMiRPanel';
+import { LoginErrorNote } from './MyWSBMiRPanel/MyWSBMiRPanel.styled';
 
-const MyPedagogium = () => {
+const MyWSBMiR = () => {
   const [isUserLogged, setIsUserLogged] = useState(false);
   const [timetable, setTimetable] = useState({});
   const [user, setUser] = useState({});
@@ -31,7 +31,7 @@ const MyPedagogium = () => {
   axios.defaults.baseURL = 'https://ap-server-8qi1.onrender.com';
 
   useEffect(() => {
-    document.title = 'My Pedagogium | Pedagogium';
+    document.title = 'My wsbmir | wsbmir';
 
     const refreshToken = async () => {
       console.log('token refresher');
@@ -65,9 +65,9 @@ const MyPedagogium = () => {
         ? `https://online.ap.education/Account/LoginByToken?token=${
             user.platformToken
           }&redirectUrl=${encodeURIComponent(
-            `https://online.ap.education/MarathonClass/?marathonId=72421&pupilId=${user.pupilId}&marathonLessonId=1160032`
+            `https://online.ap.education/marathon/80641/lesson/10566243?pupil=${user.pupilId}`
           )}`
-        : `https://online.ap.education/MarathonClass/?marathonId=72421&pupilId=${user.pupilId}&marathonLessonId=1160032`;
+        : `https://online.ap.education/marathon/80640/lesson/10566057?pupil=${user.pupilId}`;
 
       setPlatformLink(link => (link = authLink));
     };
@@ -153,7 +153,7 @@ const MyPedagogium = () => {
         </Formik>
       ) : (
         <>
-          <MyPedagogiumPanel
+          <MyWSBMiRPanel
             user={user}
             link={platformLink}
             timetable={timetable}
@@ -165,4 +165,4 @@ const MyPedagogium = () => {
   );
 };
 
-export default MyPedagogium;
+export default MyWSBMiR;

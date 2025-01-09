@@ -26,7 +26,7 @@ export const Timetable = ({ user, timetable }) => {
   );
 
   const getLink = () => {
-    const baseStreamUrl = 'https://pedagogium.ap.education/lesson/';
+    const baseStreamUrl = 'https://wsbmir.ap.education/lesson/';
 
     return user.marathonId === '72421'
       ? baseStreamUrl + 'logistics'

@@ -8,9 +8,9 @@ import {
   PanelHideRightSwitch,
   PanelHideSwitch,
   TimetableBtnIcon,
-} from './MyPedagogiumPanel.styled';
+} from './MyWSBMiRPanel.styled';
 
-export const MyPedagogiumPanel = ({
+export const MyWSBMiRPanel = ({
   user,
   language,
   timetable,

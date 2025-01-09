@@ -4,7 +4,7 @@ import { ReactComponent as ArrowRight } from '../../../img/svg/month-switch-righ
 import {
   CalendarBtnIcon,
   TimetableBtnIcon,
-} from '../MyPedagogiumPanel/MyPedagogiumPanel.styled';
+} from '../MyWSBMiRPanel/MyWSBMiRPanel.styled';
 
 export const AttendanceBox = styled.div`
   position: absolute;

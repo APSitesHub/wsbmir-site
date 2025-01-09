@@ -506,7 +506,7 @@ export const ChatDeleteMessage = styled(DeleteUserMessageIcon)`
   width: 16px;
   height: 16px;
 
-  color: #f9c8389e;
+  color: var(--main-color);
 
   &:hover,
   &:focus {
