@@ -65,9 +65,9 @@ const MyWSBMiR = () => {
         ? `https://online.ap.education/Account/LoginByToken?token=${
             user.platformToken
           }&redirectUrl=${encodeURIComponent(
-            `https://online.ap.education/marathon/80641/lesson/10566243?pupil=${user.pupilId}`
+            `https://online.ap.education/marathon/80641/lesson/1189829?pupil=${user.pupilId}`
           )}`
-        : `https://online.ap.education/marathon/80640/lesson/10566057?pupil=${user.pupilId}`;
+        : `https://online.ap.education/marathon/80640/lesson/1189662?pupil=${user.pupilId}`;
 
       setPlatformLink(link => (link = authLink));
     };
