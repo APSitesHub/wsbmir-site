@@ -16,13 +16,12 @@ export const ChatWindowedFooter = ({ socket, room }) => {
     e.preventDefault();
     console.log(message);
     console.log(message.trim() && localStorage.getItem('userName'));
-    const ip = await axios.get('https://jsonip.com/');
     if (message.trim() && localStorage.getItem('userName')) {
       socket.emit('message', {
         text: message,
         username: localStorage.getItem('userName'),
         userID: localStorage.getItem('userID'),
-        userIP: ip.data.ip,
+        userIP: '',
         id: `${socket.id}${Math.random()}`,
         socketID: socket.id,
         roomLocation: room,
